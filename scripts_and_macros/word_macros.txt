@@ -1,0 +1,82 @@
+Sub FigCapAutoNum()
+
+   Dim Rng As Range
+   Set Rng = ActiveDocument.Range
+   Do While Rng.Find.Execute(FindText:="Ðèñóíîê [0-9]{1;}", Forward:=True, Format:=False, Wrap:=wdFindStop, MatchWildcards:=True, MatchCase:=True) = True
+        Rng.MoveStart Unit:=wdCharacter, Count:=8
+        Rng.Fields.Add Range:=Rng, Type:=wdFieldEmpty, Text:="SEQ Ðèñóíîê \* ARABIC", PreserveFormatting:=True
+   Loop
+   ActiveDocument.Fields.Update
+End Sub
+
+Sub TblCapAutoNum()
+
+   Dim Rng As Range
+   Set Rng = ActiveDocument.Range
+   Do While Rng.Find.Execute(FindText:="Òàáëèöà [0-9]{1;}", Forward:=True, Format:=False, Wrap:=wdFindStop, MatchWildcards:=True, MatchCase:=True) = True
+        Rng.MoveStart Unit:=wdCharacter, Count:=8
+        Rng.Fields.Add Range:=Rng, Type:=wdFieldEmpty, Text:="SEQ Òàáëèöà \* ARABIC", PreserveFormatting:=True
+   Loop
+   ActiveDocument.Fields.Update
+End Sub
+
+
+Sub FigReferenceAutoInsert()
+   Dim figReference As String
+   
+   Dim oField As Field
+   For Each oField In ActiveDocument.Fields
+    If oField.Type = wdFieldHyperlink Then
+      If Mid(oField.Code, 16, 4) = "fig:" Then
+        oField.Unlink
+      End If
+    End If
+   Next
+   Set oField = Nothing
+   
+   Dim Rng As Range
+   Set Rng = ActiveDocument.Range
+   Do While Rng.Find.Execute(FindText:="\(ðèñóíîê [0-9]{1;}\)", Forward:=True, Format:=False, Wrap:=wdFindStop, MatchWildcards:=True, MatchCase:=True) = True
+        figReference = Rng.Text
+        figReference = Mid(figReference, 10)
+        figReference = Replace(figReference, ")", "")
+        figInt = CInt(figReference)
+        figVar = CVar(figInt)
+        Rng.MoveStart Unit:=wdCharacter, Count:=1
+        Rng.MoveEnd Unit:=wdCharacter, Count:=-1
+        Rng.InsertCrossReference ReferenceType:="Ðèñóíîê", ReferenceKind:= _
+        wdOnlyLabelAndNumber, ReferenceItem:=figVar, InsertAsHyperlink:=True, _
+        IncludePosition:=False, SeparateNumbers:=False, SeparatorString:=" "
+   Loop
+   ActiveDocument.Fields.Update
+End Sub
+
+Sub TblReferenceAutoInsert()
+   Dim tblReference As String
+   
+   Dim oField As Field
+   For Each oField In ActiveDocument.Fields
+    If oField.Type = wdFieldHyperlink Then
+      If Mid(oField.Code, 16, 4) = "tbl:" Then
+        oField.Unlink
+      End If
+    End If
+   Next
+   Set oField = Nothing
+  
+   Dim Rng As Range
+   Set Rng = ActiveDocument.Range
+   Do While Rng.Find.Execute(FindText:="\(òàáëèöà [0-9]{1;}\)", Forward:=True, Format:=False, Wrap:=wdFindStop, MatchWildcards:=True, MatchCase:=True) = True
+        tblReference = Rng.Text
+        tblReference = Mid(tblReference, 10)
+        tblReference = Replace(tblReference, ")", "")
+        tblInt = CInt(tblReference)
+        tblVar = CVar(tblInt)
+        Rng.MoveStart Unit:=wdCharacter, Count:=1
+        Rng.MoveEnd Unit:=wdCharacter, Count:=-1
+        Rng.InsertCrossReference ReferenceType:="Òàáëèöà", ReferenceKind:= _
+        wdOnlyLabelAndNumber, ReferenceItem:=tblVar, InsertAsHyperlink:=True, _
+        IncludePosition:=False, SeparateNumbers:=False, SeparatorString:=" "
+   Loop
+   ActiveDocument.Fields.Update
+End Sub

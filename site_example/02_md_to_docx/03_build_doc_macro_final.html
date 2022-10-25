@@ -1,0 +1,896 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Стильный модный молодежный подход DocOps - разработка документации как кода.">
+      
+      
+        <meta name="author" content="annjulyleon">
+      
+      
+        <link rel="canonical" href="https://docs.yourcooldomain.com/02_md_to_docx/03_build_doc_macro_final.html">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.14">
+    
+    
+      
+        <title>Постобработка - DocOps из костылей и палок</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3de6f41f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="DocOps из костылей и палок" class="md-header__button md-logo" aria-label="DocOps из костылей и палок" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DocOps из костылей и палок
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Постобработка
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="DocOps из костылей и палок" class="md-nav__button md-logo" aria-label="DocOps из костылей и палок" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DocOps из костылей и палок
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Начало
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Описание тулчейна
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Описание тулчейна" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Описание тулчейна
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_setup/01_what_is_happening.html" class="md-nav__link">
+        Ожидаемый результат
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_setup/02_install.html" class="md-nav__link">
+        Настройка
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_setup/03_all_together.html" class="md-nav__link">
+        Всё вместе
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Сборка docx из markdown
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Сборка docx из markdown" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Сборка docx из markdown
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01_folder_structure.html" class="md-nav__link">
+        Структура
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02_gd_examples.html" class="md-nav__link">
+        Примеры
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Постобработка
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="03_build_doc_macro_final.html" class="md-nav__link md-nav__link--active">
+        Постобработка
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Сборка документа
+  </a>
+  
+    <nav class="md-nav" aria-label="Сборка документа">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Запуск скрипта
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Предобработка
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Постобработка
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Сборка веб-доки
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Сборка веб-доки" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Сборка веб-доки
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_md_to_web/01_build_web.html" class="md-nav__link">
+        Превью и html
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_md_to_web/02_remove_gd_tags.html" class="md-nav__link">
+        Удаление GD тегов
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_md_to_web/04_useful_plugins.html" class="md-nav__link">
+        Плагины
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_md_to_web/05_pdf_thoughts.html" class="md-nav__link">
+        PDF
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          VSCode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="VSCode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          VSCode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_vscode_settings/01_setup_workspace.html" class="md-nav__link">
+        Workspace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_vscode_settings/02_tasks_snippets.html" class="md-nav__link">
+        Задачи и сниппеты
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Сборка документа
+  </a>
+  
+    <nav class="md-nav" aria-label="Сборка документа">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Запуск скрипта
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Предобработка
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Постобработка
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>Постобработка</h1>
+
+<h2 id="_1">Сборка документа<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<p>Время магии!</p>
+<h3 id="_2">Запуск скрипта<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<p>Документ собирается командным файлом .bat. Вот так он примерно выглядит внутри:</p>
+<div class="highlight"><pre><span></span><code><span class="go">powershell.exe -command .\build.ps1 ^</span>
+<span class="go">-md demo-report-beginning.md,demo-main.md,demo-report-end.md ^</span>
+<span class="go">-template template-report.docx ^</span>
+<span class="go">-pdf report.pdf ^</span>
+<span class="go">-docx report.docx ^</span>
+<span class="go">-embedfonts ^</span>
+<span class="go">-counters</span>
+<span class="go">pause</span>
+</code></pre></div>
+<p>Параметры:</p>
+<ul>
+<li><code>-md</code> -- список файлов через запятую, содержимое которых будет записано в результирующий файл. Они будут обрабатываться именно в том порядке, в котором здесь указаны. Можно указывать относительный путь, например вот так: <code>.\subfolder\examples.md</code>;</li>
+<li><code>-template</code> -- файл docx, который будет использован в качестве шаблона</li>
+<li><code>-pdf</code> -- название результирующего pdf файла. Если pdf не нужен (он долго выводится достаточно), то просто уберите эту строчку</li>
+<li><code>-docx</code> -- название результирующего docx файла. Будет перезаписан, если существует</li>
+<li><code>-embedfonts</code> -- включать ли шрифты в файл. Если включать, то файл получиться большим (от 4 МБ), если включать не нужно - то удалите эту строчку</li>
+<li><code>-counters</code> -- счетчики - эта опция считает количество рисунков, таблиц, секций и нумерует все соответственно</li>
+<li><code>pause</code> -- это просто чтобы окошко не исчезало сразу, и можно было ошибки посмотреть.
+Опция <code>-md</code> может получиться очень длинной, так что внимательно.</li>
+</ul>
+<p>Для сборки документов запустите отредактированный .bat файл, и рядом с .bat появятся (или перезапишутся) собранные готовые файлы.</p>
+<h3 id="_3">Предобработка<a class="headerlink" href="#_3" title="Permanent link">#</a></h3>
+<p>Как вы помните, в нашей структуре файлов в каждой папке с .md есть папка <code>_img</code>, в которой хранятся картинки. В тексте .md ссылки на картинки - относительные, вида <code>(_img/file.png)</code>. Скрипту build.ps1 нужно, чтобы все картинки размещались относительно его самого, а не относительно файла .md. Простейший способ решить эту проблему -- скопировать все картинки из дочерних <code>_img</code> в корневую относительно <code>build.ps1</code>. Для этого написан простенький скрипт на python, который:</p>
+<ol>
+<li>Получает все картинки <code>.jpg</code>, <code>.png</code>, <code>.bmp</code> (можете добавить в скрипт свои форматы и расширения).</li>
+<li>Сохраняет список картинок в <code>copied_files.json</code>. Если встретились картинки с одинаковыми названиями, перезаписывать не будет, так что все картинки должны быть с разными названиями.</li>
+<li>Копирует картинки в корневую папку.</li>
+<li>(Опционально) после сборки можно вызвать скрипт с флагом <code>-r</code>, чтобы удалить копии картинок из корневой <code>_img</code> (чтобы не было дублирования).</li>
+</ol>
+<p>Вызов скрипта можно добавить прямо в <code>build-docs.bat</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="go">@echo off</span>
+<span class="go">&quot;C:\Python\Python310\python.exe&quot; %~dp0\..\scripts_and_macros\copy_img.py -s &quot;..\docs_gost&quot; -d &quot;..\docs_gost\_img&quot; -c</span>
+<span class="go">@echo on</span>
+
+<span class="go">powershell.exe -command .\build.ps1 ^</span>
+<span class="go">-md .\report-beginning.md,.\01_setup\01_what_is_happening.md,.\01_setup\02_install.md,.\02_md_to_docx\01_folder_structure.md,.\02_md_to_docx\02_gd_examples.md,.\02_md_to_docx\03_build_doc_macro_final.md,.\03_md_to_web\01_build_web.md,.\03_md_to_web\02_remove_gd_tags.md,.\03_md_to_web\03_all_together.md,.\03_md_to_web\04_useful_plugins.md,.\03_md_to_web\05_pdf_thoughts.md,.\04_vscode_settings\01_setup_workspace.md,.\04_vscode_settings\02_tasks_snippets.md,.\report-end.md ^</span>
+<span class="go">-template template-report.docx ^</span>
+<span class="go">-pdf report.pdf ^</span>
+<span class="go">-docx report.docx ^</span>
+<span class="go">-embedfonts ^</span>
+<span class="go">-counters</span>
+
+<span class="go">@echo off</span>
+<span class="go">&quot;C:\Python\Python310\python.exe&quot; %~dp0\..\scripts_and_macros\copy_img.py -r</span>
+<span class="go">@echo on</span>
+</code></pre></div>
+<h3 id="_4">Постобработка<a class="headerlink" href="#_4" title="Permanent link">#</a></h3>
+<p>Хотя собранный документ по замыслу можно использовать прям как есть, все же требуется еще пара штрихов:</p>
+<ol>
+<li>Автонумерация для рисунков и таблиц.</li>
+<li>Перекрестные ссылки на нумерованные таблицы и рисунки.</li>
+</ol>
+<p>Gostdown не использует в финальном файле автоматическую нумерацию, а вместо этого делает закладки и гиперссылки. Проблема тут в том, что если нужно отредактировать финальный файл или отдать его Заказчику для вставки в другой документ, то нумерация таблиц и рисунков поломается. </p>
+<p>Для автоматической нумерации разработаны макросы, которые нужно добавить в шаблон Normal.dot.</p>
+<p>Алгоритм макроса на автоматическую нумерацию:</p>
+<ol>
+<li>Ищем в документе все <code>Рисунок [0-9]{1;}</code> и <code>Таблица [0-9]{1;}</code> (учитывается регистр), выделяем.</li>
+<li>Заменяем на автоматическую нумерацию. </li>
+</ol>
+<p>Аналогичного эффекта также можно добиться Поиском и заменой, если не хочется использовать макрос:</p>
+<ol>
+<li>Вставить название рисунка или таблицы (с автонумерацией).</li>
+<li>Правый клик по полю &gt; Коды/значения полей (чтобы включить полное отображение поля).</li>
+<li>Выделить «Название» с полем и Ctrl + C.</li>
+<li>Вызывать диалог Find/Replace.</li>
+<li>Отметить галку «Подстановочные знаки».</li>
+<li>В поле «Найти» вставить: <code>Рисунок [0-9]{1;}</code> или (<code>Рисунок ([0-9]{1;})</code> для группы), ну и Таблица для таблиц.</li>
+<li>В поле «Заменить» Специальный &gt; содержимое буфера обмена (или ^c).</li>
+<li>Заменить все.</li>
+<li>Обновить поля.</li>
+</ol>
+<p>Код макроса:</p>
+<div class="highlight"><pre><span></span><code>Sub FigCapAutoNum()
+
+   Dim Rng As Range
+
+   Set Rng = ActiveDocument.Range
+
+   Do While Rng.Find.Execute(FindText:=&quot;Рисунок [0-9]{1;}&quot;, Forward:=True, Format:=False, Wrap:=wdFindStop, MatchWildcards:=True, MatchCase:=True) = True
+        Rng.MoveStart Unit:=wdCharacter, Count:=8
+        Rng.Fields.Add Range:=Rng, Type:=wdFieldEmpty, Text:=&quot;SEQ Рисунок \* ARABIC&quot;, PreserveFormatting:=True
+   Loop
+
+   ActiveDocument.Fields.Update
+End Sub
+
+Sub TblCapAutoNum()
+
+   Dim Rng As Range
+
+   Set Rng = ActiveDocument.Range
+
+   Do While Rng.Find.Execute(FindText:=&quot;Таблица [0-9]{1;}&quot;, Forward:=True, Format:=False, Wrap:=wdFindStop, MatchWildcards:=True, MatchCase:=True) = True
+        Rng.MoveStart Unit:=wdCharacter, Count:=8
+        Rng.Fields.Add Range:=Rng, Type:=wdFieldEmpty, Text:=&quot;SEQ Таблица \* ARABIC&quot;, PreserveFormatting:=True
+   Loop
+
+   ActiveDocument.Fields.Update
+End Sub
+</code></pre></div>
+<p>А вот с перекрестными ссылками так просто поиском и заменой уже не получится, поэтому только макрос. В макросе захардкожены ссылки на рисунки вида <code>(рисунок N)</code> с учетом регистра, т.е. в тексте это выглядит как <code>на рисунке ниже (рисунок N)</code>. Алгоритм макроса:</p>
+<ol>
+<li>Удаляем гиперссылки с текстом, содержащим <code>fig:</code> и <code>tbl:</code>.</li>
+<li>Находим все <code>(рисунок N)</code>/<code>(таблица N</code>).</li>
+<li>Обрезаем скобки.</li>
+<li>Обрезаем номер рисунка/таблицы.</li>
+<li>Заменяем текст на перекрестную ссылку функцией InsertCrossReference с номером, который выдрали на шаге 4.</li>
+</ol>
+<p>Код макроса (убедитесь, что при вставке в Word VBA не побилась кодировка):</p>
+<div class="highlight"><pre><span></span><code>Sub FigReferenceAutoInsert()
+   Dim figReference As String
+
+   Dim oField As Field
+   For Each oField In ActiveDocument.Fields
+    If oField.Type = wdFieldHyperlink Then
+      If Mid(oField.Code, 16, 4) = &quot;fig:&quot; Then
+        oField.Unlink
+      End If
+    End If
+   Next
+   Set oField = Nothing
+
+   Dim Rng As Range
+   Set Rng = ActiveDocument.Range
+   Do While Rng.Find.Execute(FindText:=&quot;\(рисунок [0-9]{1;}\)&quot;, Forward:=True, Format:=False, Wrap:=wdFindStop, MatchWildcards:=True, MatchCase:=True) = True
+        figReference = Rng.Text
+        figReference = Mid(figReference, 10)
+        figReference = Replace(figReference, &quot;)&quot;, &quot;&quot;)
+        figInt = CInt(figReference)
+        figVar = CVar(figInt)
+        Rng.MoveStart Unit:=wdCharacter, Count:=1
+        Rng.MoveEnd Unit:=wdCharacter, Count:=-1
+        Rng.InsertCrossReference ReferenceType:=&quot;Рисунок&quot;, ReferenceKind:= _
+        wdOnlyLabelAndNumber, ReferenceItem:=figVar, InsertAsHyperlink:=True, _
+        IncludePosition:=False, SeparateNumbers:=False, SeparatorString:=&quot; &quot;
+   Loop
+   ActiveDocument.Fields.Update
+End Sub
+
+Sub TblReferenceAutoInsert()
+   Dim tblReference As String
+
+   Dim oField As Field
+   For Each oField In ActiveDocument.Fields
+    If oField.Type = wdFieldHyperlink Then
+      If Mid(oField.Code, 16, 4) = &quot;tbl:&quot; Then
+        oField.Unlink
+      End If
+    End If
+   Next
+   Set oField = Nothing
+
+   Dim Rng As Range
+   Set Rng = ActiveDocument.Range
+   Do While Rng.Find.Execute(FindText:=&quot;\(таблица [0-9]{1;}\)&quot;, Forward:=True, Format:=False, Wrap:=wdFindStop, MatchWildcards:=True, MatchCase:=True) = True
+        tblReference = Rng.Text
+        tblReference = Mid(tblReference, 10)
+        tblReference = Replace(tblReference, &quot;)&quot;, &quot;&quot;)
+        tblInt = CInt(tblReference)
+        tblVar = CVar(tblInt)
+        Rng.MoveStart Unit:=wdCharacter, Count:=1
+        Rng.MoveEnd Unit:=wdCharacter, Count:=-1
+        Rng.InsertCrossReference ReferenceType:=&quot;Таблица&quot;, ReferenceKind:= _
+        wdOnlyLabelAndNumber, ReferenceItem:=tblVar, InsertAsHyperlink:=True, _
+        IncludePosition:=False, SeparateNumbers:=False, SeparatorString:=&quot; &quot;
+   Loop
+   ActiveDocument.Fields.Update
+End Sub
+</code></pre></div>
+<p>Чтобы использовать этот код, необходимо в Microsoft Word активировать панель разработчика (рисунок ), вызвать лист VBA (рисунок ) и вставить код (рисунок ). </p>
+<p><img alt="Активация панели разработчика" src="_img/md_docx_devpanel.png" /></p>
+<p><img alt="Вызов листа с макросами" src="_img/md_docx_vbsheet.png" /></p>
+<p><img alt="Вставить код" src="_img/md_docx_vbsheet_macro.png" /></p>
+<p>А затем запустить макрос (рисунок ).</p>
+<p><img alt="Запуск макроса" src="_img/md_docx_macros.png" /></p>
+<p>Вот теперь у нас действительно классный docx.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="02_gd_examples.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Примеры" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Примеры
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../03_md_to_web/01_build_web.html" class="md-footer__link md-footer__link--next" aria-label="Next: Превью и html" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Превью и html
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c2e1ee47.min.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

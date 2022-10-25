@@ -1,0 +1,61 @@
+site_name: DocOps из костылей и палок
+site_url: https://docs.yourcooldomain.com/
+site_description: Стильный модный молодежный подход DocOps - разработка документации как кода.
+site_author: annjulyleon
+use_directory_urls: false
+
+theme:
+  name: material
+
+nav:
+  - Начало: 'index.md'
+  - Описание тулчейна:
+      - Ожидаемый результат: '01_setup\01_what_is_happening.md'
+      - Настройка: '01_setup\02_install.md'
+      - Всё вместе: '01_setup\03_all_together.md'
+  - Сборка docx из markdown:
+      - Структура: '02_md_to_docx\01_folder_structure.md'
+      - Примеры: '02_md_to_docx\02_gd_examples.md'
+      - Постобработка: '02_md_to_docx\03_build_doc_macro_final.md'
+  - Сборка веб-доки:
+      - Превью и html: '03_md_to_web\01_build_web.md'
+      - Удаление GD тегов: '03_md_to_web\02_remove_gd_tags.md'      
+      - Плагины: '03_md_to_web\04_useful_plugins.md'
+      - PDF: '03_md_to_web\05_pdf_thoughts.md'
+  - VSCode:
+      - Workspace: '04_vscode_settings\01_setup_workspace.md'
+      - Задачи и сниппеты: '04_vscode_settings\02_tasks_snippets.md'
+
+markdown_extensions:
+  - toc:
+      permalink: "#"
+      toc_depth: 4
+  - abbr
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.critic:
+      mode: view
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - bibtex:
+      bib_file: 'docs\sources.bib'
+      csl_file: 'docs\gost-r-7-0-5-2008-numeric-iaa.csl'
+  - search:
+      lang: ru

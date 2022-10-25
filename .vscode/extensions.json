@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "streetsidesoftware.code-spell-checker",
+        "ms-vscode.live-server",
+        "yzhang.markdown-all-in-one",
+        "takumii.markdowntable",
+        "jebbs.plantuml",
+        "streetsidesoftware.code-spell-checker-russian",
+        "gruntfuggly.todo-tree",
+        "mrcrowl.hg"
+    ]
+}
