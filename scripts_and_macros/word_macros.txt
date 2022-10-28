@@ -27,7 +27,7 @@ Sub FigReferenceAutoInsert()
    Dim oField As Field
    For Each oField In ActiveDocument.Fields
     If oField.Type = wdFieldHyperlink Then
-      If Mid(oField.Code, 16, 4) = "fig:" Then
+      If Mid(oField.Code, 15, 4) = "fig:" Then
         oField.Unlink
       End If
     End If
@@ -57,7 +57,7 @@ Sub TblReferenceAutoInsert()
    Dim oField As Field
    For Each oField In ActiveDocument.Fields
     If oField.Type = wdFieldHyperlink Then
-      If Mid(oField.Code, 16, 4) = "tbl:" Then
+      If Mid(oField.Code, 15, 4) = "tbl:" Then
         oField.Unlink
       End If
     End If

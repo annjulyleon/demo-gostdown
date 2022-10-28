@@ -121,7 +121,7 @@ End Sub
 
 А вот с перекрестными ссылками так просто поиском и заменой уже не получится, поэтому только макрос. В макросе захардкожены ссылки на рисунки вида `(рисунок N)` с учетом регистра, т.е. в тексте это выглядит как `на рисунке ниже (рисунок N)`. Алгоритм макроса:
 
-1. Удаляем гиперссылки с текстом, содержащим `fig:` и `tbl:`.
+1. Удаляем гиперссылки с текстом, содержащим `fig:` и `tbl:`. Это делается в блоке `Mid(oField.Code, 15, 4)`. При этом в разных документах по какой-то причине название элемента гиперссылки начинается либо с 16 либо с 15 символа. Загадки Word, что тут скажешь.
 2. Находим все `(рисунок N)`/`(таблица N`).
 3. Обрезаем скобки.
 4. Обрезаем номер рисунка/таблицы.
@@ -136,7 +136,7 @@ Sub FigReferenceAutoInsert()
    Dim oField As Field
    For Each oField In ActiveDocument.Fields
     If oField.Type = wdFieldHyperlink Then
-      If Mid(oField.Code, 16, 4) = "fig:" Then
+      If Mid(oField.Code, 15, 4) = "fig:" Then
         oField.Unlink
       End If
     End If
@@ -166,7 +166,7 @@ Sub TblReferenceAutoInsert()
    Dim oField As Field
    For Each oField In ActiveDocument.Fields
     If oField.Type = wdFieldHyperlink Then
-      If Mid(oField.Code, 16, 4) = "tbl:" Then
+      If Mid(oField.Code, 15, 4) = "tbl:" Then
         oField.Unlink
       End If
     End If
