@@ -1,5 +1,5 @@
 @echo off
-"C:\Python\Python310\python.exe" %~dp0\..\scripts_and_macros\copy_img.py -s "..\docs_gost" -d "..\docs_gost\_img" -c
+python %~dp0\..\scripts_and_macros\copy_img.py -s "..\docs_gost" -d "..\docs_gost\_img" -c
 @echo on
 
 powershell.exe -command .\build.ps1 ^
@@ -11,5 +11,5 @@ powershell.exe -command .\build.ps1 ^
 -counters
 
 @echo off
-"C:\Python\Python310\python.exe" %~dp0\..\scripts_and_macros\copy_img.py -r
+python %~dp0\..\scripts_and_macros\copy_img.py -r
 @echo on
