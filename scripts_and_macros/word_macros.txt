@@ -2,9 +2,9 @@ Sub FigCapAutoNum()
 
    Dim Rng As Range
    Set Rng = ActiveDocument.Range
-   Do While Rng.Find.Execute(FindText:="Ðèñóíîê [0-9]{1;}", Forward:=True, Format:=False, Wrap:=wdFindStop, MatchWildcards:=True, MatchCase:=True) = True
+   Do While Rng.Find.Execute(FindText:="Рисунок [0-9]{1;}", Forward:=True, Format:=False, Wrap:=wdFindStop, MatchWildcards:=True, MatchCase:=True) = True
         Rng.MoveStart Unit:=wdCharacter, Count:=8
-        Rng.Fields.Add Range:=Rng, Type:=wdFieldEmpty, Text:="SEQ Ðèñóíîê \* ARABIC", PreserveFormatting:=True
+        Rng.Fields.Add Range:=Rng, Type:=wdFieldEmpty, Text:="SEQ Рисунок \* ARABIC", PreserveFormatting:=True
    Loop
    ActiveDocument.Fields.Update
 End Sub
@@ -13,9 +13,9 @@ Sub TblCapAutoNum()
 
    Dim Rng As Range
    Set Rng = ActiveDocument.Range
-   Do While Rng.Find.Execute(FindText:="Òàáëèöà [0-9]{1;}", Forward:=True, Format:=False, Wrap:=wdFindStop, MatchWildcards:=True, MatchCase:=True) = True
+   Do While Rng.Find.Execute(FindText:="Таблица [0-9]{1;}", Forward:=True, Format:=False, Wrap:=wdFindStop, MatchWildcards:=True, MatchCase:=True) = True
         Rng.MoveStart Unit:=wdCharacter, Count:=8
-        Rng.Fields.Add Range:=Rng, Type:=wdFieldEmpty, Text:="SEQ Òàáëèöà \* ARABIC", PreserveFormatting:=True
+        Rng.Fields.Add Range:=Rng, Type:=wdFieldEmpty, Text:="SEQ Таблица \* ARABIC", PreserveFormatting:=True
    Loop
    ActiveDocument.Fields.Update
 End Sub
@@ -36,7 +36,7 @@ Sub FigReferenceAutoInsert()
    
    Dim Rng As Range
    Set Rng = ActiveDocument.Range
-   Do While Rng.Find.Execute(FindText:="\(ðèñóíîê [0-9]{1;}\)", Forward:=True, Format:=False, Wrap:=wdFindStop, MatchWildcards:=True, MatchCase:=True) = True
+   Do While Rng.Find.Execute(FindText:="\(рисунок [0-9]{1;}\)", Forward:=True, Format:=False, Wrap:=wdFindStop, MatchWildcards:=True, MatchCase:=True) = True
         figReference = Rng.Text
         figReference = Mid(figReference, 10)
         figReference = Replace(figReference, ")", "")
@@ -44,7 +44,7 @@ Sub FigReferenceAutoInsert()
         figVar = CVar(figInt)
         Rng.MoveStart Unit:=wdCharacter, Count:=1
         Rng.MoveEnd Unit:=wdCharacter, Count:=-1
-        Rng.InsertCrossReference ReferenceType:="Ðèñóíîê", ReferenceKind:= _
+        Rng.InsertCrossReference ReferenceType:="Рисунок", ReferenceKind:= _
         wdOnlyLabelAndNumber, ReferenceItem:=figVar, InsertAsHyperlink:=True, _
         IncludePosition:=False, SeparateNumbers:=False, SeparatorString:=" "
    Loop
@@ -66,7 +66,7 @@ Sub TblReferenceAutoInsert()
   
    Dim Rng As Range
    Set Rng = ActiveDocument.Range
-   Do While Rng.Find.Execute(FindText:="\(òàáëèöà [0-9]{1;}\)", Forward:=True, Format:=False, Wrap:=wdFindStop, MatchWildcards:=True, MatchCase:=True) = True
+   Do While Rng.Find.Execute(FindText:="\(таблица [0-9]{1;}\)", Forward:=True, Format:=False, Wrap:=wdFindStop, MatchWildcards:=True, MatchCase:=True) = True
         tblReference = Rng.Text
         tblReference = Mid(tblReference, 10)
         tblReference = Replace(tblReference, ")", "")
@@ -74,7 +74,7 @@ Sub TblReferenceAutoInsert()
         tblVar = CVar(tblInt)
         Rng.MoveStart Unit:=wdCharacter, Count:=1
         Rng.MoveEnd Unit:=wdCharacter, Count:=-1
-        Rng.InsertCrossReference ReferenceType:="Òàáëèöà", ReferenceKind:= _
+        Rng.InsertCrossReference ReferenceType:="Таблица", ReferenceKind:= _
         wdOnlyLabelAndNumber, ReferenceItem:=tblVar, InsertAsHyperlink:=True, _
         IncludePosition:=False, SeparateNumbers:=False, SeparatorString:=" "
    Loop
