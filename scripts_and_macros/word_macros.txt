@@ -1,3 +1,20 @@
+Sub RunMacroMultipleFiles()
+
+   Dim file
+   Dim path As String
+   path = "Y:\doc_repos\report25\build\"
+   file = Dir(path & "*.docx")
+   Do While file <> ""
+      Documents.Open FileName:=path & file
+      Call FigCapAutoNum
+      Call TblCapAutoNum
+      Call FigReferenceAutoInsert
+      Call TblReferenceAutoInsert
+      Documents.Close SaveChanges:=wdSaveChanges
+      file = Dir()
+   Loop
+End Sub
+
 Sub FigCapAutoNum()
 
    Dim Rng As Range
